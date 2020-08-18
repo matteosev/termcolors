@@ -1,0 +1,19 @@
+termcolors
+==========
+Test whether your terminal supports 8 bit colors or not.
+
+Run
+===
+Simply put the file termcolors.py wherever you want and run the python
+interpreter on it.
+
+Linux & co
+==========
+Set the right permissions to execute the file
+```
+chmod +x termcolors.py
+```
+Run the script as a normal executable
+```
+./termcolors.py
+```
