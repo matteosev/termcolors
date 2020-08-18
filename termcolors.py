@@ -1,8 +1,9 @@
 #!/bin/python3
 
 """
-termcolors.py
-See how well your terminal supports 8 bit colors (256 colors).
+The trick to output color to the terminal is to use ANSI escape sequences:
+    https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
+    https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-python
 """
 
 from os import get_terminal_size
@@ -19,6 +20,9 @@ def printAnsiColors(start, end):
     print("\033[0m")
 
 if __name__ == "__main__" :
+    # if the standard output is not an interactive terminal 
+    # (for example if it is redirected like so : termcolors.py > somefile)
+    # output nothing
     if stdout.isatty():
         print("8 bit terminal colors :")
         print("-----------------------")
